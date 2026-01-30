@@ -1,0 +1,12 @@
+{
+  "type": "solarfluxkeepupgrades:solar_panel_upgrade_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "solarflux:sp_1"
+    }
+  ],
+  "result": {
+    "item": "solarflux:sp_1"
+  }
+}

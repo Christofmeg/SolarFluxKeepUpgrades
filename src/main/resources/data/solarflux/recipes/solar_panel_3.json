@@ -1,0 +1,27 @@
+{
+  "type": "solarfluxkeepupgrades:solar_panel_upgrade_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "solarflux:sp_2"
+    },
+    "p": {
+      "item": "solarflux:photovoltaic_cell_1"
+    },
+    "c": {
+      "item": "minecraft:repeater"
+    },
+    "b": {
+      "tag": "forge:storage_blocks/iron"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "scs",
+    "sbs"
+  ],
+  "result": {
+    "item": "solarflux:sp_3"
+  },
+  "show_notification": true
+}
