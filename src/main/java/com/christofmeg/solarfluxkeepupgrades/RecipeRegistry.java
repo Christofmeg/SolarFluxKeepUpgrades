@@ -12,8 +12,8 @@ public class RecipeRegistry {
 
     public static final DeferredRegister<RecipeSerializer<?>> RECIPES_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, SolarFluxKeepUpgrades.MOD_ID);
 
-    public static final RegistryObject<RecipeSerializer<SolarPanelUpgradeRecipeShaped>> SOLAR_PANEL_UPGRADE_SERIALIZER_SHAPED = RECIPES_SERIALIZERS.register("solar_panel_upgrade_shaped", SolarPanelUpgradeRecipeSerializerShaped::new);
-    public static final RegistryObject<RecipeSerializer<SolarPanelUpgradeRecipeShapeless>> SOLAR_PANEL_UPGRADE_SERIALIZER_SHAPELESS = RECIPES_SERIALIZERS.register("solar_panel_upgrade_shapeless", SolarPanelUpgradeRecipeSerializerShapeless::new);
+    public static final RegistryObject<RecipeSerializer<SolarPanelUpgradeRecipeShaped>> SOLAR_PANEL_UPGRADE_SERIALIZER_SHAPED = RECIPES_SERIALIZERS.register("crafting_shaped", SolarPanelUpgradeRecipeSerializerShaped::new);
+    public static final RegistryObject<RecipeSerializer<SolarPanelUpgradeRecipeShapeless>> SOLAR_PANEL_UPGRADE_SERIALIZER_SHAPELESS = RECIPES_SERIALIZERS.register("crafting_shapeless", SolarPanelUpgradeRecipeSerializerShapeless::new);
 
     public static void init(@Nonnull IEventBus modEventBus) {
         RECIPES_SERIALIZERS.register(modEventBus);

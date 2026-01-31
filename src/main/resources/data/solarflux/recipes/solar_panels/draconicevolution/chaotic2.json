@@ -1,0 +1,54 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "draconicevolution"
+        }
+      ],
+      "recipe": {
+        "type": "draconicevolution:fusion_crafting",
+        "catalyst": {
+          "type": "draconicevolution:ingredient_stack",
+          "count": 1,
+          "items": [
+            {
+              "item": "draconicevolution:chaotic_core"
+            }
+          ]
+        },
+        "ingredients": [
+          {
+            "item": "draconicevolution:awakened_core"
+          },
+          {
+            "item": "draconicevolution:awakened_core"
+          },
+          {
+            "item": "draconicevolution:awakened_core"
+          },
+          {
+            "item": "draconicevolution:awakened_core"
+          },
+          {
+            "item": "solarflux:sp_de.draconic"
+          },
+          {
+            "item": "solarflux:sp_de.draconic"
+          },
+          {
+            "item": "solarflux:sp_de.draconic"
+          }
+        ],
+        "result": {
+          "count": 4,
+          "item": "solarflux:sp_de.chaotic"
+        },
+        "tier": "CHAOTIC",
+        "total_energy": 256000000
+      }
+    }
+  ]
+}

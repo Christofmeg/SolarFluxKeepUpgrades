@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "draconicevolution"
+        }
+      ],
+      "recipe": {
+        "type": "solarfluxkeepupgrades:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "s": {
+            "item": "solarflux:sp_de.wyvern"
+          },
+          "e": {
+            "item": "draconicevolution:draconic_energy_core"
+          },
+          "c": {
+            "item": "draconicevolution:awakened_core"
+          }
+        },
+        "pattern": [
+          "ses",
+          "ece",
+          "ses"
+        ],
+        "result": {
+          "count": 2,
+          "item": "solarflux:sp_de.draconic"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}
