@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "solarfluxkeepupgrades:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "solarflux:sp_tf.fiery"
+          }
+        ],
+        "result": {
+          "item": "solarflux:sp_tf.fiery"
+        }
+      }
+    }
+  ]
+}

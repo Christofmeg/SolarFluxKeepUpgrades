@@ -80,6 +80,10 @@ dependencies {
     compileOnly fg.deobf("curse.maven:draconic-evolution-223565:6793843")
     compileOnly fg.deobf("curse.maven:codechicken-lib-1-8-242818:5753868")
     compileOnly fg.deobf("curse.maven:brandons-core-231382:5422013")
+
+ //   runtimeOnly fg.deobf("curse.maven:re-avaritia-623969:7525231")
+    runtimeOnly fg.deobf("curse.maven:avaritianeo-1083158:7089389")
+    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -132,6 +136,9 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
     }
     mainFile.addRequirement("solar-flux-reborn")
     mainFile.addOptional("draconic-evolution")
+    mainFile.addOptional("the-twilight-forest")
+    mainFile.addOptional("avaritianeo")
+    mainFile.addOptional("re-avaritia")
 }
 
 modrinth {
@@ -151,5 +158,7 @@ modrinth {
     dependencies {
         required.project "solar-flux-reborn"
         optional.project "draconic-evolution"
+        optional.project "avaritianeo"
+        optional.project "re-avaritia"
     }
 }

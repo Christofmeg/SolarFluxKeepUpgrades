@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "solarfluxkeepupgrades:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "s": {
+            "item": "solarflux:sp_tf.fiery"
+          },
+          "c": {
+            "item": "solarflux:twilightforest/twilight_cell_2"
+          },
+          "f": {
+            "tag": "forge:gems/carminite"
+          }
+        },
+        "pattern": [
+          "ccc",
+          "sfs",
+          "sfs"
+        ],
+        "result": {
+          "count": 2,
+          "item": "solarflux:sp_tf.carminite"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}
