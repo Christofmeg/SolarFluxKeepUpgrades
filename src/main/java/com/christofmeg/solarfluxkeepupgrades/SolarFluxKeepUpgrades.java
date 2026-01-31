@@ -15,7 +15,7 @@ public class SolarFluxKeepUpgrades {
         RecipeRegistry.init(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    /*
+/*
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, modid = SolarFluxKeepUpgrades.MOD_ID)
     public static class Common {
         @SubscribeEvent
@@ -34,6 +34,6 @@ public class SolarFluxKeepUpgrades {
                 }
             }
         }
-    }*/
-
+    }
+*/
 }

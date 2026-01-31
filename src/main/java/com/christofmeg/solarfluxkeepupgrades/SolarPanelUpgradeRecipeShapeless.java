@@ -116,7 +116,6 @@ public class SolarPanelUpgradeRecipeShapeless extends ShapelessRecipe {
         for (int i = 0; i < inv.getContainerSize(); i++) {
             ItemStack stack = inv.getItem(i);
             if (stack.getItem() instanceof SolarPanelBlockItem && stack.hasTag()) {
-                System.out.println("true");
                 CompoundTag tag = stack.getTag();
                 if (tag != null && tag.contains("Upgrades")) {
                     SimpleInventory upgradeInv = new SimpleInventory(5);
