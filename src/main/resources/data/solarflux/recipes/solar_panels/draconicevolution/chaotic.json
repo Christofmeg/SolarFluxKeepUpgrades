@@ -9,25 +9,22 @@
         }
       ],
       "recipe": {
-        "type": "draconicevolution:fusion_crafting",
+        "type": "solarfluxkeepupgrades:fusion_crafting",
         "catalyst": {
-          "type": "draconicevolution:ingredient_stack",
-          "count": 1,
-          "items": [
-            {
-              "item": "draconicevolution:chaotic_core"
-            }
-          ]
+          "item": "draconicevolution:chaotic_core"
         },
         "ingredients": [
           {
             "item": "draconicevolution:awakened_core"
           },
-          {
-            "item": "draconicevolution:awakened_core"
+		  {
+            "item": "solarflux:sp_de.draconic"
           },
           {
             "item": "draconicevolution:awakened_core"
+          },
+		  {
+            "item": "solarflux:sp_de.draconic"
           },
           {
             "item": "draconicevolution:awakened_core"
@@ -36,10 +33,7 @@
             "item": "solarflux:sp_de.draconic"
           },
           {
-            "item": "solarflux:sp_de.draconic"
-          },
-          {
-            "item": "solarflux:sp_de.draconic"
+            "item": "draconicevolution:awakened_core"
           }
         ],
         "result": {
