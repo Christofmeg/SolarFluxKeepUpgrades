@@ -1,2 +1,2 @@
-1.1.0:
-- Integration to Avaritia and The Twilight Forest
+1.1.1:
+- Update license to The MIT License (MIT)
