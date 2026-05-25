@@ -1,2 +1,2 @@
-1.1.1:
-- Update license to The MIT License (MIT)
+1.2.0:
+- Code cleanup
