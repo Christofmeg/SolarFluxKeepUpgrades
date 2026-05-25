@@ -3,7 +3,7 @@ import net.darkhax.curseforgegradle.TaskPublishCurseForge
 plugins {
     id 'idea'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
-    id 'net.darkhax.curseforgegradle' version '1.+'
+    id 'net.darkhax.curseforgegradle' version '1.1.+'
     id 'com.modrinth.minotaur' version '2.+'
 }
 
@@ -81,8 +81,8 @@ dependencies {
     compileOnly fg.deobf("curse.maven:codechicken-lib-1-8-242818:5753868")
     compileOnly fg.deobf("curse.maven:brandons-core-231382:5422013")
 
- //   runtimeOnly fg.deobf("curse.maven:re-avaritia-623969:7525231")
-    runtimeOnly fg.deobf("curse.maven:avaritianeo-1083158:7089389")
+    runtimeOnly fg.deobf("curse.maven:re-avaritia-623969:7525231")
+ //   runtimeOnly fg.deobf("curse.maven:avaritianeo-1083158:7089389")
     runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 }
 
