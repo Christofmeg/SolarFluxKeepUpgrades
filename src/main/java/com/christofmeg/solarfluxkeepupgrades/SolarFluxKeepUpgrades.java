@@ -1,39 +1,37 @@
 package com.christofmeg.solarfluxkeepupgrades;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.CraftingContainer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.*;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import org.zeith.solarflux.block.SolarPanelBlockItem;
+import org.zeith.solarflux.items.data.PanelDataComponent;
 
-@SuppressWarnings("removal")
+@EventBusSubscriber(modid = SolarFluxKeepUpgrades.MOD_ID)
 @Mod(SolarFluxKeepUpgrades.MOD_ID)
 public class SolarFluxKeepUpgrades {
 
     public static final String MOD_ID = "solarfluxkeepupgrades";
 
-    public SolarFluxKeepUpgrades() {
-        MinecraftForge.EVENT_BUS.register(this);
-        RecipeRegistry.init(FMLJavaModLoadingContext.get().getModEventBus());
-    }
-
-    /* Debugging
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, modid = SolarFluxKeepUpgrades.MOD_ID)
-    public static class Common {
-        @SubscribeEvent
-        public static void onCratedEvent(PlayerEvent.ItemCraftedEvent event) {
-            Player player = event.getEntity();
-            Level level = player.level();
-            if (!level.isClientSide) {
-                RecipeManager manager = level.getRecipeManager();
-                Container container = event.getInventory();
-                if (container instanceof CraftingContainer craftingContainer) {
-                    Optional<? extends Recipe<CraftingContainer>> recipeOpt = manager.getRecipeFor(RecipeType.CRAFTING, craftingContainer, level);
-                    if (recipeOpt.isPresent()) {
-                        ResourceLocation recipeId = recipeOpt.get().getId();
-                        player.sendSystemMessage(Component.literal("Crafted recipe ID: " + recipeId));
-                    }
-                }
+    @SubscribeEvent
+    public static void onCraftedEvent(PlayerEvent.ItemCraftedEvent event) {
+        Player player = event.getEntity();
+        if (player.level().isClientSide) return;
+        if (!(event.getInventory() instanceof CraftingContainer craftingContainer)) return;
+        if (event.getCrafting().isEmpty()) return;
+        for (ItemStack stack : craftingContainer.getItems()) {
+            if (stack.isEmpty()) continue;
+            if (!(stack.getItem() instanceof SolarPanelBlockItem)) continue;
+            PanelDataComponent com = stack.get(PanelDataComponent.TYPE.get());
+            if (com == null || com.isEmpty()) continue;
+            for (ItemStack item : com.upgrades()) {
+                player.getInventory().placeItemBackInInventory(item.copy());
             }
         }
-    }*/
+    }
 
 }

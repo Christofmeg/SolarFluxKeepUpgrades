@@ -131,7 +131,10 @@ configurations {
 }
 
 dependencies {
-    implementation "curse.maven:jei-238222:7391682"
+    runtimeOnly "curse.maven:jei-238222:7420587"
+    implementation "curse.maven:solar-flux-reborn-246974:6776635"
+    implementation "curse.maven:hammer-lib-247401:5739162"
+    runtimeOnly "maven.modrinth:recipeexport:zSkExwAj"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
