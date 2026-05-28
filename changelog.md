@@ -1,2 +1,2 @@
-1.2.0:
-- Code cleanup
+1.0.0:
+- Initial 21.1 release
